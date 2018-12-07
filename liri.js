@@ -32,7 +32,7 @@ function chooseActn(actn, title) {
             getMovie(title)
             break;
         case "do-what-it-says":
-            
+            getRandom()
             break;
         default:
             console.log("liri doesn't understand")
@@ -85,6 +85,22 @@ function getMovie(title) {
 
     });
 
+}
+
+function getRandom() {
+    FS.readFile("random.txt", "utf8", function(err, data) {
+        if (err) {
+            console.log(err)
+        }
+        else {
+            console.log(data)
+            var random = data.split(",")
+            actn = random[0]
+            title = random[1]
+            chooseActn(actn, title)
+        }
+    })
+   
 }
 
 
