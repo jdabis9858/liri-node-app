@@ -5,6 +5,6 @@ exports.spotify = {
     secret: process.env.SPOTIFY_SECRET
   };
 
-exports.BandsInTown = {
-    id: process.env.BANSINTOWN_ID
-}
+// exports.BandsInTown = {
+//     id: process.env.BANSINTOWN_ID
+// }
